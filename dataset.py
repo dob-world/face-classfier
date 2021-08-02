@@ -18,7 +18,7 @@ def load_image(path):
 
 
 class ImageDataset(Dataset):
-    def __init__(self, celeba_dir, transform, noise_transform, length=120000, is_predict=False):
+    def __init__(self, celeba_dir, transform, noise_transform, length=999999, is_predict=False):
         self.celeba_dir = celeba_dir
         path = os.path.join(celeba_dir, '*.png')
         self.file_list = glob(path)
