@@ -8,15 +8,10 @@ from model import CNN
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 torch.manual_seed(777)
 
-
-
 learning_rate = 0.001
 training_epochs = 15
 
-
 celeba_dir = '../../dataset/celeba/img_align_celeba'
-others_dir = '../../dataset/others'
-image_size = 64
 dataset = ImageDataset(celeba_dir,
                        transform=transf,
                        noise_transform=noise_transf)
